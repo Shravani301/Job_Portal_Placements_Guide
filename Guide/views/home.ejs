@@ -1,0 +1,69 @@
+<%- include('partials/header.ejs') %>
+    <div>
+        <div class="upc-events" id="upcomingevents1">
+        <h1>Upcoming Placements</h1>
+        <hr>
+            <% for(let i = 0; i < posts.length; i++) { 
+                var now=new Date();
+            var term = new Date(parseInt(posts[i].deadline.slice(0,4)), parseInt(posts[i].deadline.slice(5,7))-1, parseInt(posts[i].deadline.slice(8,), 0, 0, 0, 0));
+            
+            var Difference_In_Time = term.getTime() - now.getTime();
+            var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+            if(Difference_In_Days>=0){
+                
+                %>
+                <div class="event-box">
+                <h1><%= posts[i].title %></h1>
+                <h3><%= posts[i].description.slice(0,100) %></h3>
+
+                <a href="/home/<%= students[0].student_rollno %>/<%= posts[i]._id %>" class="btn btn-primary">Read More</a>
+
+                
+            </div>
+            <% } }%>
+        </div>   
+        
+        <div class="upc-events" id="yourapplications1">
+        <h1>Your Applications</h1>
+        
+        <div>
+            <% for(let i = 0; i < events.length; i++) { %>
+                <% for(let j = 0; j < posts.length; j++) { if(posts[j]._id==events[i].event_id){ %>
+                    <div class="event-box">
+                    <h1><%= posts[j].title %></h1>
+                    <h3><%= posts[j].description.slice(0,100) %></h3>
+    
+                    <a href="/home/yourapplications/<%= students[0].student_rollno %>/<%= posts[j]._id %>" class="btn btn-primary">Read More</a>
+    
+                    
+                </div>
+                <% }} %>
+            <% } %>
+        </div></div>
+        <div class="upc-events" id="companyeligibility1">
+        <h1>Company eligibility</h1>
+        <div>
+            <div class="event-box">
+            <h3>Here is the On/Off Campus Placement Eligibility Criteria for BE-Btech Fresher of top MNC recruiter Like TCS, Infosys, Cognizant, Wipro, Siemens, TechMahindra, Accenture, HCL, Dell, Hp, Lenovo , NIIT Tech, Mindtree, etc. and many more companies we will updates in near future.</h3>
+            <a href="/companywiseeligibility/<%= students[0].student_rollno %>" class="btn btn-primary">Click Here to Know More</a>
+        </div>
+        </div>
+    </div>
+        <div class="upc-events" id="paststats1">
+        <h1>Past Statistics</h1>
+        <div class="event-boxn" style="transform: scale(0.9);
+            padding: 20px;
+            padding-bottom: 50px;
+            border-radius: 5px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;font-size: 25px;">
+            <a href="/placements/2022/<%= students[0].student_rollno %>">YearWise Placements 2022</a><br>
+            <a href="/placements/2021/<%= students[0].student_rollno %>">YearWise Placements 2021</a><br>
+            <a href="/placements/2020/<%= students[0].student_rollno %>">YearWise Placements 2020</a>
+        </div>
+        </div>
+
+
+        
+    </div>
+    
+<%- include('partials/footer.ejs') %>
