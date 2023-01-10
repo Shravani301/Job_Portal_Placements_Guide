@@ -1,0 +1,120 @@
+<%- include('partials/headerwithout.ejs') %>
+<style>
+ 
+
+
+
+
+
+</style>
+    <div class="stdb">
+    <h1>Students Database</h1>
+    <table class="table" id="stdb">
+    <thead>
+        <tr>
+            <td>Roll No</td>
+            <td>Name</td>
+            <td>Password</td>
+            <td>CGPA</td>
+            <td>Image</td>
+            <td>Mobile</td>
+            <td>Program</td>
+            <td>Branch</td>
+            <td>Delete</td>
+            <td>Edit</td>
+        </tr>
+    </thead>
+    <tbody>
+    <% for(let i = 0; i < students.length; i++) { %>
+    
+        <tr>
+            <td><%= students[i].student_rollno%></td>
+            <td><%= students[i].student_name%></td>
+            <td><%= students[i].student_pass%></td>
+            <td><%= students[i].student_cgpa%></td>
+            <td><%= students[i].student_img%></td>
+            <td><%= students[i].student_mobile%></td>
+            <td><%= students[i].student_program%></td>
+            <td><%= students[i].student_branch%></td>
+            <td><a href="/deletestudent/<%=students[i]._id%>">Delete</a></td>
+            <td><a href="/editstudent/<%=students[i]._id%>">Edit</a></td>
+        </tr>
+    
+    <% } %>
+    
+</tbody>
+</table>
+
+<br><br>
+<h1>Events Database</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Title</td>
+            <td>Company</td>
+            <td>Branches</td>
+            <td>Description</td>
+            <td>DeadLine</td>
+            <td>Link</td>
+            <td>Company Contact</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </thead>
+    <tbody>
+        <% for(let i = 0; i < posts.length; i++) { %>
+    
+            <tr>
+                <td><%= posts[i].title%></td>
+                <td><%= posts[i].company%></td>
+                <td><%= posts[i].branch%></td>
+                <td><%= posts[i].description.slice(0,10)%>...</td>
+                <td><%= posts[i].deadline%></td>
+                <td><%= posts[i].link%></td>
+                <td><%= posts[i].companycontact%></td>
+                
+                <td><a href="/deletepost/<%=posts[i]._id%>">Delete</a></td>
+                <td><a href="/editpost/<%=posts[i]._id%>">Edit</a></td>
+            </tr>
+        
+        <% } %>
+
+
+    </tbody>
+
+
+
+</table>
+
+
+<br><br>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Company </td>
+            <td>Eligibility</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(let i = 0; i < companye.length; i++) { %>
+        <tr>
+            <td><%=companye[i].company%></td>
+            <td><%=companye[i].eligibility.slice(0,20)%>...</td>
+            <td><a href="/deletecompanye/<%=companye[i]._id%>">Delete</a></td>
+            <td><a href="/editcompanye/<%=companye[i]._id%>">Edit</a></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+</div>
+<script>
+    
+
+        
+</script>
+
+
+<%- include('partials/footer.ejs') %>
