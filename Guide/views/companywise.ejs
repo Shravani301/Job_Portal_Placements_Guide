@@ -1,0 +1,24 @@
+<%- include('partials/header.ejs') %>
+<style>
+    
+
+
+
+
+
+</style>
+<div class="elig">
+    <% for(let i=0; i< company.length ; i++){ 
+        const array=company[i].eligibility.split(';')
+        %>
+        <div class="eligbox">
+        <h2><%= company[i].company%></h2>
+        <ul>
+        <%for(let j=0;j<array.length;j++){%>
+            <li><%=array[j]%></li>
+        <%}%>
+        </ul>
+    </div>
+    <%}%>
+</div>
+<%- include('partials/footer.ejs') %>
