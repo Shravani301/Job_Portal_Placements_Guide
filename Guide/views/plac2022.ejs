@@ -1,0 +1,44 @@
+<%- include('partials/header.ejs') %>
+<style>
+   
+
+
+
+
+</style>
+    <div class="plach">
+        <h1>YearWise Placements <%=year%></h1>
+    </div>
+    <table class="table">
+    <thead>
+        <tr>
+            <td>Name of Organisation</td>
+            <td>Salary per Annum</td>
+            <td>Date</td>
+            <td>ECE</td>
+            <td>CSE</td>
+            <td>IT</td>
+            <td>EEE</td>
+            <td>Mechanical</td>
+            <td>Civil</td>
+            <td>Total</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(let i=0;i<50;i++){%>
+        <tr>
+            <td>Demo</td>
+            <td>100k</td>
+            <td>20-10-<%=year%></td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>13</td>
+        </tr>
+        <%}%>
+    </tbody>
+</table>
+<%- include('partials/footer.ejs') %>
