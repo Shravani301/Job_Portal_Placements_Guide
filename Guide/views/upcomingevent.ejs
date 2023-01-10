@@ -1,0 +1,50 @@
+<%- include('partials/header.ejs') %>
+    <style>
+        
+
+
+
+
+
+
+    </style>
+    
+    <form action="/applyevent/<%= students[0].student_rollno%>/<%= post._id %>" method="post">
+    <div class="event-web">
+
+        <h1><%= post.title %></h1>
+        <hr><hr>
+        <h3>Company</h3><hr>
+        <h4><%= post.company %></h4>
+        <hr>
+        <h3>Eligible Branches:</h3>
+        <h4><%=post.branch%></h4>
+        <hr><hr>
+        <%if(ddline>=0){%>
+        <h3>Ends in <%=ddline%> days</h3>
+        <%}else{%>
+            <h3>Event ended <%=Math.abs(ddline)%> days ago</h3>
+        <%}%>
+
+        <hr><hr>
+        <h2>Job Description</h2><hr>
+        <h3 style="color: gray;"><%= post.description %></h3>
+        <h3 style="color: gray;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis debitis cumque eligendi ex nostrum consequuntur numquam illum perspiciatis incidunt, illo fugiat ab inventore qui et aperiam, molestiae saepe harum <hr>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit deleniti doloremque quibusdam cum facilis aliquid tenetur, aspernatur, ex suscipit accusamus in numquam quo. Quis, praesentium. Dolore, possimus! Tempora possimus deleniti similique praesentium magni, autem omnis reprehenderit facilis voluptatibus asperiores illum voluptatem qui voluptate ipsa ducimus at ipsum molestias tenetur necessitatibus voluptates mollitia veritatis dolor id ratione. Eaque harum laudantium atque incidunt quam dolor, consequatur quaerat quos labore quis facilis magnam et iusto voluptatem quod ullam dolorum nesciunt alias doloremque repellendus ipsam fugit at assumenda sit! Quas reprehenderit aspernatur, facilis consequatur omnis quae animi molestiae ullam quod corporis deleniti ipsam, nihil illum illo? Eligendi, reprehenderit. Tempore porro dolorum atque similique facilis numquam explicabo nihil nesciunt praesentium omnis sapiente nobis dignissimos libero officia commodi laudantium voluptates velit ipsum, quas cum ea beatae cumque. Laboriosam facere aut quisquam consectetur repellendus dolor recusandae in officia aspernatur. Alias voluptatum dolorem iure nobis, tenetur ab vitae quaerat at sapiente eveniet veniam soluta qui iusto assumenda architecto, distinctio impedit laborum commodi tempore quisquam magnam, corporis enim sit quo! Reprehenderit asperiores vitae autem quidem soluta impedit. Sequi, a. Illum aspernatur saepe perferendis exercitationem ex, aliquid quae placeat minima error porro ab nesciunt, recusandae corporis omnis repellat quas dolores. <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, quidem nulla nobis eaque, nostrum voluptatum aliquam vel voluptatibus quaerat, culpa corporis. Sit minus neque inventore ipsam aut accusamus, consequatur magnam itaque maiores cupiditate recusandae hic eveniet et rerum totam libero. Quaerat dolorem quasi voluptatibus eveniet incidunt libero officia voluptates minima alias quis! Velit nihil ab modi animi eaque nesciunt dolorem aliquam, enim iste quaerat iure eos vitae! Vero maxime aliquam minima assumenda adipisci error minus deleniti deserunt molestias quaerat sapiente, quidem aliquid, ea amet modi laborum libero ducimus nostrum ipsam ab? Placeat quisquam accusantium eum odio dolorum. Eum quia nobis tempora quos, laudantium tempore, quae reiciendis enim similique mollitia accusantium vel nihil facere voluptatibus, et cupiditate magnam rerum sequi eius delectus maxime blanditiis quidem! Facere architecto dolor nulla neque laudantium voluptatum ipsa illum fuga voluptas vel eum minus iure sapiente quia, a vitae deserunt sed rem quisquam. Hic, ducimus quis.<br> <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum laudantium et cum perspiciatis quibusdam ipsam minus? Cupiditate, ipsum. Sed eum perspiciatis consequatur neque voluptatem dolores quaerat, exercitationem quos earum inventore magnam, vero voluptatibus quasi! Quasi itaque, eius autem nemo accusantium soluta sed voluptatem ea culpa optio laudantium quos delectus sapiente eligendi! Similique sed quia mollitia, illum iste temporibus veritatis saepe commodi. Neque odio necessitatibus dignissimos cupiditate voluptate incidunt accusamus amet cum alias itaque harum repellat excepturi architecto eos, ut, nisi quaerat exercitationem facere est magni accusantium. Modi qui doloribus aliquid eius quidem aliquam facilis amet, odio quasi. In quibusdam sapiente cupiditate nesciunt corrupti? Suscipit aliquam sint nisi perspiciatis debitis explicabo! Error saepe accusamus quibusdam ducimus dolores culpa fugit provident in harum explicabo quasi molestias inventore reiciendis, sapiente nesciunt voluptates ipsum. Quos maiores eligendi dolor. Assumenda inventore dolor labore autem quia veniam libero enim, tenetur ducimus quos porro iusto nihil temporibus aspernatur, sed sint quis possimus voluptates aut velit mollitia. Aspernatur eligendi nisi quam error illo a exercitationem debitis aperiam laborum? Facilis, molestiae maxime? Sequi enim earum voluptates ducimus cumque id.</h3>
+
+
+          <hr><hr>
+        <h2>Deadline</h2><hr>
+        <h3><%= post.deadline %></h3>
+        <%if(c==0){%>
+        <a href="<%= post.link %>" id="applyjob" class="btn btn-primary" style="float:right" >Register Here</a>
+        <%}%>
+        <hr><hr>
+        <h2>Contact</h2><hr>
+        <h3><%= post.companycontact %></h3>
+        <%if(c==0){%>
+        
+        <button type="submit" class="btn btn-primary" style="float:right">Click here to add to Upcoming events</button>
+        <%}%>
+    </div>
+    </form>
+<%- include('partials/footer.ejs') %>
