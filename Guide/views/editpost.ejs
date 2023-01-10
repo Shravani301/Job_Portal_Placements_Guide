@@ -1,0 +1,42 @@
+<%- include('partials/headerwithout.ejs') %>
+<style>
+    
+
+</style>
+<div class="uploadeve" style="transform: scale(0.9);">
+    <h1>For Uploading Events</h1>
+    <form action="/editpost/<%=posts._id%>" method="post" class="form-group">
+        <label for="eventtitle">Title</label>
+        <input type="text" id="eventtitle" name="eventtitle" class="form-control" value="<%=posts.title%>">
+
+        <label for="eventcompany">Company</label>
+        <input type="text" id="eventcompany" name="eventcompany" class="form-control" value="<%=posts.company%>">
+
+        <label for="eventbranch">Branch</label>
+        <input type="text" id="eventbranch" name="eventbranch" class="form-control" value="<%=posts.branch%>">
+
+
+
+
+        <label for="eventdescription">Description</label>
+        <input type="textarea" id="eventdescription" name="eventdescription" class="form-control" value="<%=posts.description%>">
+
+        <label for="eventdeadline">DeadLine</label>
+        <input type="date" id="eventdeadline" name="eventdeadline" class="form-control" value="<%=posts.deadline%>""\>
+
+        <label for="eventlink">Registration Link</label>
+        <input type="text" id="eventlink" name="eventlink" class="form-control" value="<%=posts.link%>">
+
+        <label for="eventcompanycontact">Further Contact</label>
+        <input type="text" id="eventcompanycontact" name="eventcompanycontact" class="form-control" value="<%=posts.companycontact%>">
+
+        <br>
+        
+        <button type="submit" class="btn btn-primary">Add to Database</button>
+
+
+
+    </form>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
