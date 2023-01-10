@@ -1,0 +1,19 @@
+<%- include('partials/headerwithout.ejs') %>
+<style>
+ 
+
+</style>
+<div class="uploadeve" style="transform: scale(0.9);">
+    <h1>Add Company eligibility</h1>
+    <form action="/editcompanye/<%=companye._id%>" method="post" class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" class="form-control" value="<%=companye.company%>">
+
+        <label for="eligibility">Eligibility</label>
+        <input type="text" id="eligibility" name="eligibility" class="form-control" value="<%=companye.eligibility%>">
+        <br>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
