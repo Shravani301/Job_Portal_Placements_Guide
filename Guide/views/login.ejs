@@ -1,0 +1,58 @@
+<%- include('partials/headerwithout.ejs') %>
+  
+
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="https://i.pinimg.com/564x/70/5b/18/705b189fbab839ddaa17ed139f52304e.jpg" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+              <h3>Log In</h3>
+              <p class="mb-4"></p>
+            </div>
+            <form action="/home" method="post">
+              <div class="form-group first">
+                
+                <input type="text" class="form-control" id="username" name="id" placeholder="username">
+
+              </div>
+              <div class="form-group last mb-4">
+                
+                <input type="password" class="form-control" id="password" name="p" placeholder="password">
+                
+              </div>
+              <%try{if(errormsg==1){%>
+                <div class="alert alert-danger" role="alert"  id="alertinvalidlogin">
+                  Invalid login credentials
+                </div>
+                <%}}catch{}%>
+              
+              <div class="d-flex mb-5 align-items-center">
+                <span class="ml-auto"><a href="mailto: placements@rit.ac.in" class="forgot-pass">Forgot Password</a></span> 
+              </div>
+              
+              <button type="submit" class="btn btn-block btn-primary">Log In</button>
+
+              
+              
+            </form>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+    
+  </body>
+</html>
+
+<%- include('partials/footer.ejs') %>
