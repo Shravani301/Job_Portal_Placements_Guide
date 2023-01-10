@@ -1,0 +1,23 @@
+<%- include('partials/header.ejs') %>
+<style>
+    
+
+
+</style>
+<div class="edprbox">
+<form action="/seditstudent/<%=students[0]._id%>" method="POST" class="form-group">
+    <label for="student_rollno">Roll No</label>
+    <input type="text" id="student_rollno" name="student_rollno" value="<%=students[0].student_rollno%>" class="form-control">
+    <label for="student_name">Name</label>
+    <input type="text" id="student_name" name="student_name" value="<%=students[0].student_name%>" class="form-control">
+    <label for="student_pass">Password</label>
+    <input type="text" id="student_pass" name="student_pass" placeholder="Password@123" value="<%=students[0].student_pass%>" class="form-control">
+    <label for="student_mobile">Mobile</label>
+    <input type="number" id="student_mobile" name="student_mobile" value="<%=students[0].student_mobile%>" class="form-control">
+    
+    <label for="student_branch">Branch</label>
+    <input type="text" id="student_branch" name="student_branch" value="<%=students[0].student_branch%>" class="form-control"><br>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+</div>
+<%- include('partials/footer.ejs') %>
