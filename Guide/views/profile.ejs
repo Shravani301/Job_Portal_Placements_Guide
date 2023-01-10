@@ -1,0 +1,90 @@
+<%- include('partials/header.ejs') %>
+<style>
+ 
+
+</style>
+<div class="container emp-profile">
+    
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <img src=" ../uploads/<%=students[0].student_rollno%>.jpg" alt=""/>
+                   
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="profile-head">
+                            <h5>
+                                <%=students[0].student_name%>
+                            </h5>
+                            <h6>
+                                Student
+                            </h6>
+                    
+                </div>
+            </div>
+            <div class="col-md-2">
+                <a href="/editprofile/<%=students[0]._id%>" class="btn btn-primary">Edit Profile</a>
+            </div>
+        </div>
+        <hr>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+            </li>
+        </ul>
+        <hr>
+        <div class="row">
+            
+            <div class="col-md-4">
+                <div class="profile-work">
+                    <p>Program</p>
+                    <a href=""><%=students[0].student_program%></a><br/>
+                    <p>Branch</p>
+                    <a href=""><%=students[0].student_branch%></a><br/>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>User Id</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><%=students[0].student_rollno%></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Name</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><%=students[0].student_name%></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Phone</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><%=students[0].student_mobile%></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>CGPA</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><%=students[0].student_cgpa%></p>
+                                    </div>
+                                </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+               
+</div>
+
+<%- include('partials/footer.ejs') %>
