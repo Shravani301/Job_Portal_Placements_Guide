@@ -1,0 +1,82 @@
+<%- include('partials/headerwithout.ejs') %>
+<style>
+    
+
+</style>
+<div>
+    <div class="uploadeve">
+    <h1>For creating Student Database</h1>
+    <form action="/poststudent" method="POST" enctype="multipart/form-data" class="form-group">
+        <label for="student_rollno">Roll No</label>
+        <input type="text" id="student_rollno" name="student_rollno" class="form-control">
+        <label for="student_name">Name</label>
+        <input type="text" id="student_name" name="student_name" class="form-control">
+        <label for="student_pass">Password</label>
+        <input type="text" id="student_pass" name="student_pass" placeholder="Password@123" class="form-control">
+        <label for="student_cgpa">CGPA</label>
+        <input type="text" id="student_cgpa" name="student_cgpa" class="form-control">
+        <label for="student_image">Image</label>
+        <input type="file" id="student_image" name="student_image" class="form-control">
+        <label for="student_mobile">Mobile</label>
+        <input type="number" id="student_mobile" name="student_mobile" class="form-control">
+        <label for="student_program">Program</label>
+        <input type="text" id="student_program" name="student_program" class="form-control">
+        <label for="student_branch">Branch</label>
+        <input type="text" id="student_branch" name="student_branch" class="form-control">
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+    <div class="uploadeve">
+    <h1>For Uploading Events</h1>
+    <form action="/admin" method="post" class="form-group">
+        <label for="eventtitle">Title</label>
+        <input type="text" id="eventtitle" name="eventtitle" class="form-control">
+
+        <label for="eventcompany">Company</label>
+        <input type="text" id="eventcompany" name="eventcompany" class="form-control">
+
+        <label for="eventbranch">Branch</label>
+        <input type="text" id="eventbranch" name="eventbranch" class="form-control">
+
+
+
+
+        <label for="eventdescription">Description</label>
+        <input type="textarea" id="eventdescription" name="eventdescription" class="form-control">
+
+        <label for="eventdeadline">DeadLine</label>
+        <input type="date" id="eventdeadline" name="eventdeadline" class="form-control">
+
+        <label for="eventlink">Registration Link</label>
+        <input type="text" id="eventlink" name="eventlink" class="form-control">
+
+        <label for="eventcompanycontact">Further Contact</label>
+        <input type="text" id="eventcompanycontact" name="eventcompanycontact" class="form-control">
+
+        <br>
+        
+        <button type="submit" class="btn btn-primary">Add to Database</button>
+
+
+
+    </form>
+    </div>
+    <div class="uploadeve">
+        <h1>Add Company eligibility</h1>
+    <form action="/companywise" method="post" class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" class="form-control">
+
+        <label for="eligibility">Eligibility</label>
+        <input type="text" id="eligibility" name="eligibility" class="form-control">
+        <br>
+        <button type="submit" class="btn btn-primary">Add to Database</button>
+    </form>
+</div>
+
+    <div style="display: flex; justify-content: center;padding-bottom: 20px;">
+    <a class="btn btn-primary" href="/admin/DB" >Veiw Database</a>
+</div>
+</div>
+<%- include('partials/footer.ejs') %>
