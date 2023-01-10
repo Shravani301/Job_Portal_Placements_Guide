@@ -1,0 +1,24 @@
+<%- include('partials/headerwithout.ejs') %>
+
+<form action="/editstudent/<%=students._id%>" method="POST" class="form-group" style="transform: scale(0.9);">
+    <label for="student_rollno">Roll No</label>
+    <input type="text" id="student_rollno" name="student_rollno" value="<%=students.student_rollno%>" class="form-control">
+    <label for="student_name">Name</label>
+    <input type="text" id="student_name" name="student_name" value="<%=students.student_name%>" class="form-control">
+    <label for="student_pass">Password</label>
+    <input type="text" id="student_pass" name="student_pass" placeholder="Password@123" value="<%=students.student_pass%>" class="form-control">
+    <label for="student_cgpa">CGPA</label>
+    <input type="text" id="student_cgpa" name="student_cgpa" value="<%=students.student_cgpa%>" class="form-control">
+    <label for="student_mobile">Mobile</label>
+    <input type="number" id="student_mobile" name="student_mobile" value="<%=students.student_mobile%>" class="form-control">
+    <label for="student_program">Program</label>
+    <input type="text" id="student_program" name="student_program" value="<%=students.student_program%>" class="form-control">
+    <label for="student_branch">Branch</label>
+    <input type="text" id="student_branch" name="student_branch" value="<%=students.student_branch%>" class="form-control">
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
+
+
+
+<%- include('partials/footer.ejs') %>
